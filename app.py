@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import filedialog
 from reportlab.pdfgen import canvas
 from PIL import Image, ImageTk
+import webbrowser
 import os
 
 class ImageToPDFConverter:
@@ -67,6 +68,8 @@ class ImageToPDFConverter:
             pdf.showPage()
 
         pdf.save()
+
+        webbrowser.open(output_pdf_path)
 
 
 def main():
